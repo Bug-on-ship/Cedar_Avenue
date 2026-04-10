@@ -1,0 +1,838 @@
+
+
+/*This is for the Main Title*/
+h1.Sethy {
+    display: block;
+    margin-bottom: clamp(1rem, 2.5rem, 2.8rem);
+    font-weight: bold;
+/* My edits beyond the base h1 (I made this cuz Bootstrap uses h1 in its CSS*/
+  text-shadow: -1px 0 white, 0 1px white,
+                1px 0 white, 0 -1px white;
+  text-align: center;
+  text-shadow: 0 0 0.2em rgb(103, 255, 252), 0 0 0.2em;
+  color: #040026;
+  padding-top: clamp(0rem, .5rem, 1.15rem);
+  font-family:Optimus;
+  font-size: clamp(2.6rem, 4vw, 3.5rem);
+  /*Padding pushes away from other content*/
+}
+
+h1.Sethy123 {
+    display: block;
+    margin-bottom: clamp(1rem, 2.5rem, 2.8rem);
+    font-weight: bold;
+/* My edits beyond the base h1 (I made this cuz Bootstrap uses h1 in its CSS*/
+
+  text-align: center;
+  text-shadow: 0 0 0.1em rgb(229, 100, 255), 0 0 0.1em;
+  color: hsl(0, 0%, 100%);
+  padding-top: clamp(0rem, .5rem, 1.15rem);
+  font-family:Optimus;
+  font-size: clamp(2.6rem, 4vw, 3.5rem);
+  /*Padding pushes away from other content*/
+}
+
+
+
+h2.Silly {text-align: center;
+
+    display: block;
+    font-size: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family:Optimus;
+
+    color: #040026;
+    font-size: clamp(1.4rem, 2vw, 3.4rem);
+    
+}
+h2.Silly1 {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family:Optimus;
+    color: #040026;
+    font-size: clamp(1.4rem, 2vw, 3.4rem);
+  }
+
+h2.SillyTime {text-align: center; /*Timelapses subtitles*/
+    margin-top: -30px;
+    display: block;
+    font-size: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family:Optimus;
+
+    color: #040026;
+    font-size: clamp(1.4rem, 2vw, 3.4rem);
+    
+}
+/* Paragraph Fonts */ 
+.p1 {
+    text-align: left;
+    display: block;
+    font-family:Optimus;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+    
+}
+/* Paragraph Fonts */ 
+
+/* Paragraph Text Box and Margins */ 
+.p1Contain {
+
+  margin: .4rem;
+  margin-bottom: 4rem;
+}
+
+
+/* Bottom up responsive design: In charge of making 2x2, 1x4 then 4x1 for small med large breakpoints*/
+.centeraboutTxt {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(150px, 250px)); /* small: 2x2 */
+}
+
+@media (min-width: 673px) { /* 673 breakpoint not based on anything other than just aesthetic choice*/
+  .centeraboutTxt {
+    grid-template-columns: repeat(4, minmax(150px, 250px)); /* medium: 4 in one row */
+  }
+}
+
+@media (min-width: 992px) {
+  .centeraboutTxt {
+    grid-template-columns: 1fr; /* large: 1 column */
+  }
+}
+/* In charge of making 2x2.. END -- MOVE TO NEW DOC*/
+
+/*Textbox CSS for About gradient boxes (incls padding media queries)*/
+.gradient_textbox {
+  width: clamp(150px, 40vw, 220px);
+  padding: 1rem;  position: relative;
+  background: linear-gradient(45deg, #c70ae8, #a82dcd);
+  padding: 3px;
+  display: flex;
+  border-radius: 0px;
+  cursor: pointer;
+}
+/*Inspo below is for bottom right corner of the top left text box showing cool design i want for my big txtbox.*/
+/*https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNbNwpKylgpYGwFHSVB5LZBw8OFxA7k0IT1A_MWn3haY9gDW4O3FNf89BTYuSeEHbdVSDtkPWTGpEiCo3lZS8KqTBcEQBRCQasTF5wXxNYViE05mZ4e4gTz04mbGQ8pCzO2dP-Ea40tQQ/s1600/2010.12.26.KB.Crossroads.bmp*/
+/*inspo below for name small cap text in topp left for stat title and large thinner pixel font for text.*/
+/*https://www.gameuidatabase.com/index.php?&scrn=67&set=1&sort=3&plat=1&tag=15&autoload=68185*/
+.gradient_textbox_black_fill { /*when setting width, this will be slightly smaller due to padding, so look at above .gradient_textbox to get real value*/
+  background: radial-gradient(
+  ellipse 80% 60% at center, /*first num in ecclipse tells the x-axis  by the percent specified of the element's horizontal radius and same for Y but vertical radius. So what would happen if you did 100% and 100%? Would the corners be reached? No. */
+  #98fffa 1%, /* for reg (non elipse) radial grad, "push the center color to this _%, outward from the middle, as a solid color, then fills the distance between where the inside color ends and the stopper starts (so the full gradient secton is difference between the stopper - inside color %.*/
+  #bdf8ff71 160%
+);
+  width: clamp(150px, 40vw, 220px);
+  color: #040026;
+  padding: clamp(10px, 2vh, 16px);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gill Sans MT';
+
+  border-radius: 8px;
+  user-select: none;
+}
+
+                      .gradient_textbox.outline_about_boxes_spectrum1 {
+                        background: linear-gradient(to right, rgb(66, 194, 166), rgb(53, 18, 210));
+                      }
+
+                      .gradient_textbox.outline_about_boxes_spectrum2 {
+                        background: linear-gradient(to right, rgb(118, 118, 255), rgb(105, 24, 198));
+                      }
+
+                      .gradient_textbox.outline_about_boxes_spectrum3 {
+                        background: linear-gradient(to right, rgb(123, 26, 214),rgb(204, 26, 207));
+                      }
+
+                      .gradient_textbox.outline_about_boxes_spectrum4 {
+                        background: linear-gradient(to right, rgb(255, 75, 243), rgb(198, 34, 110));
+                      }
+
+
+.gradient_textbox:hover .gradient_textbox_black_fill  { 
+  background: radial-gradient(
+  ellipse 80% 60% at center, /*first num in ecclipse tells the x-axis  by the percent specified of the element's horizontal radius and same for Y but vertical radius. So what would happen if you did 100% and 100%? Would the corners be reached? No. */
+  #ffdffd 1%, /* for reg (non elipse) radial grad, "push the center color to this _%, outward from the middle, as a solid color, then fills the distance between where the inside color ends and the stopper starts (so the full gradient secton is difference between the stopper - inside color %.*/
+  #f5d6ff00 200%
+);}
+
+
+
+@media (min-width: 673px) { /* 673-992 breakpoint for txtboxes from 673-992px to make straight line. Based on centerabouttxt grid template aesthetics, but the break NEEDed to be above 420/380 for iphone view purposes.*/
+  .gradient_textbox {
+    width: clamp(156px, 20vw, 160px);
+    padding: 5px;
+  }
+
+  .gradient_textbox_black_fill {
+    width: clamp(150px, 20vw, 200px);
+    padding: clamp(6px, 2vh, 18px);
+    font-size: 23px;
+
+  }
+  .centeraboutTxt{
+    gap: 10px;
+  }
+
+}
+
+@media (min-width: 992px) { /* 992+ breakpoint based on centerabouttxt grid template but for desktop view purposes*/
+  .gradient_textbox {
+    width: clamp(220px, 20vw, 300px);
+    padding: 5px;
+    align-self: start;
+
+  }
+  .gradient_textbox_black_fill {
+    width: clamp(220px, 20vw, 300px);
+    padding: clamp(6px, 2vh, 18px);
+    font-size: clamp(25px, 2vw, 30px);
+  }
+  .centeraboutTxt{
+    justify-items: right;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 14px;
+  }
+}
+
+
+
+
+/* Paragraph Txt Box and Margins */ 
+
+body {     
+  background: linear-gradient(#071c3b, rgb(31, 74, 166), rgb(42, 106, 255), #82ffff);
+  min-width: 360px;
+}
+
+
+
+html {  
+  padding-bottom: max(100px, env(safe-area-inset-bottom)); /* the 100px is a fixed value if the bottom gives issues, don't use 100% cuz something is making the screen lower than it really is (like 2000%). Use some fixed px.*/
+
+} 
+
+
+
+                  /* body {     AAAAAAADDDDDDDDDDDD
+                    background: linear-gradient(rgb(177, 247, 233), rgb(0, 179, 255));
+                  }
+
+
+
+                  html {  
+                    padding-bottom: max(100px, env(safe-area-inset-bottom));} */ /* the 100px is a fixed value if the bottom gives issues, don't use 100% cuz something is making the screen lower than it really is (like 2000%). Use some fixed px.*/
+
+
+
+
+
+
+/*------------ Subsections of WIPS ------------*/
+.subWIP-container { /*this is the container subWIP-container in teh RosieWIP and other sub WIP html divs. It allows you to keep the bootstrap formatting, while making your own additions, while ALSO making different versions because if you justname it .container1, it's not bootstrap anymore and breaks, but .container "anything" is fine, and the CSS becomes just ."anything"*/
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  flex-wrap: wrap;          /* allows multiple items to wrap on smaller screens */
+  gap: 1rem;                /* optional spacing between items */
+
+}
+
+.colWIP {  /*the invisible box holding subWIPS, their Update titles and their paragraphs, e.g., Update 1, Royal Rosie IMG, paragraph*/
+  text-align: center;
+  margin-bottom: 1rem;
+  width:800px;
+  margin: 0 auto;  
+  height:auto;
+
+}
+
+.image-cardWIP { /*The subWIP images themselves */
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+    border: 2px solid rgb(29, 9, 83);
+}
+
+
+/*------------ Subsections of WIPS END ------------*/
+
+
+/* ----- Nav Bar CSS Specs ------------------------------------------------------------------ */
+
+/* ===== Top Bar Container ===== */
+.topbar {
+  z-index: 1000;
+}
+
+/* ===== Navbar Reset ===== */
+.topbar .navbar {
+  padding: 1.4rem 1.5rem;
+}
+.topbar .nav {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: clamp(1.4rem, 3vw, 3rem);
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+
+ .navbar.aboutbotpad{ /* explanation of diff between navbar.pad and navbar .pad in obsidian*/
+  padding-bottom: 0px;
+
+}
+                        /* .navbar.aboutbotpad{ /* this applies to html */
+                        /*  padding-bottom: 0px;
+                        }      This must go below .topbar .navbar to be able to apply*/
+
+.container-fluid.centnav {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*To move over to mobile a well as regular navbar, goes above topbar. nav*/
+                          /* .topbar .navbar {
+                            padding: 1.4rem 1.5rem;
+                          }
+                          .topbar .nav {
+                            display: flex;
+
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            gap: clamp(1.4rem, 3vw, 3rem);
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            list-style: none;
+                          }
+
+                          .container-fluid.centnav {
+
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                          } */
+
+
+
+
+
+
+
+/* ===== Nav Layout =====           REMOOOOOOOOOOOVE from main doc (useless)
+                          .topbar .nav {
+                            gap: clamp(1.4rem, 3vw, 3rem);
+                          } */
+
+/* ===== Links ===== */
+.topbar .nav-link {
+  margin: clamp(.1rem, .4vw, 1rem)
+          clamp(.1rem, .2vw, .5rem);
+  padding: clamp(0.3rem, .35vw, 0.5rem)
+           clamp(0.3rem, .4vw, 0.8rem);
+  background: radial-gradient(ellipse 62% 48% at center, #fddefd 50%, #a90bd8 145%);
+  border: 3px solid #33d0f7;
+  border-radius: 0.5rem;
+  color: #003465;
+  font-size: clamp(1rem, 1.9vw, 1.5rem);
+  font-weight: bold;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  transition: 
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+  font-family: 'Gill Sans MT';
+}
+.topbar .nav-link:hover{
+   background: radial-gradient(ellipse 62% 48% at center, #ffffff 50%, #de84fa 190%);
+   color: #005bcb;
+}
+
+
+
+
+
+/* Active underline */
+.topbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+}
+
+/*----Navbar image selector ICON CSS----*/
+/*Makes nav list icon a parent for the selected image indicator (the image above the navbar icon showing which one is currently selected) to follow it proportionally on the page*/
+
+.nav-item {
+  position: relative; /* now child absolute elements are relative to this li */
+}
+
+
+
+/*This does the image positioning now that the above code make the navbar icon a parent*/
+.absolute-img {
+  position: absolute;
+  top: -50px;           /* adjust vertical placement in relation to  */
+  left: 90%;            /* center horizontally over link */
+  transform: translateX(-50%);
+  width: 130px;          /* if this is percent, it wil be percent of the list icon which is variable and messes the positioning cuz it doesn't know which side to grow or shrink it from.*/
+  z-index: 10;          /* the layer is visually above the link */
+  pointer-events: none; /* optional: so it doesn’t block clicks on the link */
+  user-select: none;
+}
+/*This does 3 things. Firstly, there is two images in the same spot, one is opaque, the other is invisible. And they swap when you hover the parent element (the navbar list, not the image itself...)*/
+.hover-img {
+  opacity: 0; /* hidden by default */
+}
+
+.nav-item:hover .hover-img {
+  opacity: 1;   /* show hover image */
+}
+
+.container-fluid.marg1aboutitle{
+  padding-left: clamp(20px, 8vw, 120px);
+  padding-right: clamp(20px, 8vw, 120px);
+  height: clamp(60px, 20vw, 90px);
+  position: relative;
+}
+.aboutmargin{
+    margin-top: clamp(0px, 2vh, 30px);
+}
+
+
+.container-fluid.marg2aboutelements{  
+  margin: 100px;
+    max-width: 100%;
+    background: #11085e00;
+    border-radius: 30px;
+    /* required base border */
+    border: 16px solid transparent;
+    
+    padding: 25px;
+
+    /* border image setup */
+    border-image-source: url("Assets/Border_Design_1.png");
+    border-image-slice: 90;       /* corner size in your image */
+
+    border-image-width: auto;   /* thickness on screen */
+    border-image-repeat: stretch;
+
+    image-rendering: pixelated;
+}
+
+
+
+.p1about {
+    text-align: left;
+    display: block;
+    font-family:Optimus;
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+
+    justify-content: left;
+    
+}
+
+
+.nav-item:hover .default-img {
+  opacity: 0;   /* hide default image */
+}
+
+.absolute-imgcling {
+  position: absolute;
+  top: -50px;           /* adjust vertical placement in relation to  */
+  left: 85%;            /* center horizontally over link */
+  transform: translateX(-50%);
+  width: 130px;          /* if this is percent, it wil be percent of the list icon which is variable and messes the positioning cuz it doesn't know which side to grow or shrink it from.*/
+  z-index: 10;          /* the layer is visually above the link */
+  pointer-events: none; /* optional: so it doesn’t block clicks on the link */
+  user-select: none;
+}
+
+  /* ----- Nav Bar CSS Specs END ---------------------------------------------------------------------- */
+
+
+  /*---------- Animations -------------------------------------------------------------------*/
+.video-container1 {
+  width: 60%;        /* or whatever size you want */
+  max-width: 100%;
+  margin: auto; /* centers and adds space above/below */
+  display: block;
+  /* remove position: relative and padding-top entirely */
+}
+
+.video-container1 video {
+  width: 100%;      /* fills container width */
+  height: auto;     /* maintains aspect ratio */
+  display: block;   /* removes small inline spacing under video */
+  border-radius: 0.5rem;
+}
+
+/*---------- Animations END -------------------------------------------------------------------*/
+
+
+
+/*---------- Time Lapses -------------------------------------------------------------------*/
+
+
+.video-container2 {
+  display: flex;                  /* place videos in a row */
+  gap: 5%;                      /* small space between videos */
+  margin: 0;                 /* center container vertically */
+  align-items: center;           /* ensures all videos same height */
+  padding-top: clamp(10px, 40px, 80px);
+  padding-right: clamp(10px, 40px, 80px);
+  padding-left: clamp(10px, 40px, 80px);
+  padding-bottom: clamp(10px, 0px, 80px);
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.video-container2 video {
+  flex: 1 1 0;                    /* grow/shrink equally, start from 0 */
+  width: 100%;                     /* fill flex item width */
+  height: auto;                    /* maintain aspect ratio */
+  object-fit: cover;               /* crop if aspect ratio differs */
+
+}
+
+
+/*---------- Time Lapses END -------------------------------------------------------------------*/
+
+
+/*---------- WIPS photos and hover grey effect ---------------------------------------------------------------------*/
+.image-card {
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-card img {
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.image-card .overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.4); /* gray overlay */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  opacity: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: opacity 0.3s ease;
+
+}
+
+.image-card .overlay-text {
+  color: white;
+  font-size: clamp(0.1rem, 1.3vw, 1.9rem);
+  font-weight: 400;
+  text-align: left;
+}
+
+.image-card:hover img {
+  filter: grayscale(30%);
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+/*---------- WIPS photos and hover grey effect END ---------------------------------------------------------------------*/
+
+
+/*----------- SethSpinDefault ------------*/
+.SpinSparkleHolder {
+  position: relative;
+  width: 340;
+  height: 612;
+
+  overflow: visible;
+  
+}
+
+
+.SethSpinDefault  { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;
+  top:0;
+  left: 20px;
+  width: 340;
+  height: 612;
+  overflow: hidden;
+
+
+}
+
+@keyframes SpinDefaultSeth{ /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  from{transform: translate3d(0px, 0,0)
+  }
+  to {
+    transform: translate3d(-100%,0,0)  /*Note for animations*/
+  }
+}
+
+
+.SethSpinDefault_spritesheet { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images, 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+  animation: SpinDefaultSeth 1.7s steps(12) infinite; 
+  user-select: none;
+  pointer-events: none;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+
+/*----------- SethSpinDefault END ------------*/
+                    .centersethspin {   /*add to new doc for middle sethspin alignment*/
+                      display: flex;
+                      justify-content: center;
+                    }
+
+
+
+/*----------- 6 Sparkles START -----------*/
+
+.Seth_Sparkle_Container_1 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_1{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+
+
+.Sparkle_Style_1 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+/* ############ Simply repeat the above and rename to match JS and HTML to scale #############*/
+
+.Seth_Sparkle_Container_2 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_2{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+.Sparkle_Style_2 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+/* ############ Simply repeat the above and rename to match JS and HTML to scale #############*/
+
+.Seth_Sparkle_Container_B3 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_B3{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+.Sparkle_Style_B3 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+/* ############ Simply repeat the above and rename to match JS and HTML to scale #############*/
+
+.Seth_Sparkle_Container_B4 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_B4{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+.Sparkle_Style_B4 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+/* ############ Simply repeat the above and rename to match JS and HTML to scale #############*/
+
+.Seth_Sparkle_Container_B5 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_B5{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+.Sparkle_Style_B5 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+/* ############ Simply repeat the above and rename to match JS and HTML to scale #############*/
+
+.Seth_Sparkle_Container_B6 { /*step 1: using the container, grab exactly 1 chunk of the image by dividing the sprite sheet's # of height and rows by the width and height itself and specify where 1 image is, then the overflow makes the rest of sprites invisible.*/
+  position: absolute;   /*the sparkle square itself*/
+  top: 0px;     /*top:-40px    right: 200px for top left*/
+  right: 0px;   /*top: 480px    right: 40px  for bottom right */
+  width: 128px; /* this is non-inherently connected to teh 9steps because the 9 steps is cutting image width 9 ways. Each image is exactly 64px, so this must equal what the steps divide the image width by*/
+  height: 128px; 
+  overflow: hidden;
+}
+
+@keyframes Seth_Sparkle_Anim_B6{  /* @keyframes defines an animation (function pretty much) of the name "Seth_Sparkle_Container" for ease of reference to the div it's referring to/ happening in, just a name to be called later as you can see below*/
+  from{transform: translate3d(0px, 0,0)  /*step 2, define a keyframe animation called SpinDefaultSeth taking image FROM original position and moving it 100% to itself to the left by 100% (our right). Instead of worrying about moving it exact pixels, you can just move it based on 100% which uses it's own dimension that we made earlier) */
+  }                                  /*Think of translate3d(-100%, 0, 0) (x,y,z) as shifting the element entirely to the left, off its normal position. */
+  to {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+.Sparkle_Style_B6 { /*step 3: Using the sprite image class, call the key frame animation that we made above. The 2s is "two seconds" and is how fast the transition from the left to the right across the entire sprite row will move (12 images/ "steps", 2 seconds = 6 fps . So you'd need diff functions for diff row lengths, as well as if a differnet rom just needs different timing, but I won't.*/
+/*Steps are frames in SpriteSheet but removed for JS animation new technique*/
+  user-select: none;
+  pointer-events: none;
+  width: auto;
+  height: 100%; /*when doubling image size, make the height 100% as opposed to width cuz something weird happens since the width is longer or something... and also double the container dimensions too.*/
+  image-rendering: pixelated;
+  display: block;
+} /* The steps means how many jumps should the animation make for the key frame (how many images/ columns the sprite sheet has), and infinite says to loop*/
+
+
+/*----------- Sparkles END -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
